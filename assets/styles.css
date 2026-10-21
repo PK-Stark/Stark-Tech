@@ -578,3 +578,100 @@ header {
   .brand b { font-size: 15px; }
   .brand small { font-size: 7px; }
 }
+
+
+
+
+/* GLOBAL STARK TECH THEME FIX */
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #080b12 !important;
+  color: #e8edf5 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+body {
+  min-height: 100vh;
+}
+
+header {
+  background: #080b12 !important;
+  color: #e8edf5 !important;
+  border-bottom: 1px solid #34302a !important;
+}
+
+header a,
+header .brand,
+header .links,
+header .brand b {
+  color: #e8edf5 !important;
+}
+
+header .brand small,
+.eyebrow,
+.hero-proof i,
+.hero-capabilities b {
+  color: #d6b56d !important;
+}
+
+a {
+  color: #d6b56d;
+}
+
+a:hover {
+  color: #f3d99b;
+}
+
+h1, h2, h3, h4, p, li, label {
+  color: inherit;
+}
+
+.hero,
+.cinematic-hero {
+  color: #e8edf5 !important;
+}
+
+.hero .lead,
+.hero-copy .lead,
+.card p,
+.content p,
+.content li,
+.heading p {
+  color: #b5bfce !important;
+}
+
+.section,
+.section.alt,
+.content,
+.pagehero {
+  background-color: #080b12;
+  color: #e8edf5;
+}
+
+.card,
+.item,
+.form,
+.cta {
+  color: #e8edf5;
+}
+
+input,
+select,
+textarea {
+  background: #101722;
+  color: #e8edf5;
+  border: 1px solid #3a414b;
+}
+
+footer,
+.foot {
+  background: #080b12;
+  color: #a5afbe;
+}
+
+img {
+  max-width: 100%;
+}
+
