@@ -30,3 +30,7 @@ Open `index.html` in a browser, or run `python -m http.server 8080` from this di
 5. Connect a custom domain later from the Pages project settings. Domain registration usually costs extra.
 
 No certifications, client endorsements, project results or performance claims have been invented. Confirm all claims before launch.
+
+
+## Official logo integration
+The supplied logo is displayed in the homepage hero as `assets/stark-tech-logo.jpg`. A cropped emblem `assets/stark-tech-icon.jpg` appears in the navigation. Stylesheet paths use `assets/styles.css` consistently.
