@@ -34,3 +34,6 @@ No certifications, client endorsements, project results or performance claims ha
 
 ## Official logo integration
 The supplied logo is displayed in the homepage hero as `assets/stark-tech-logo.jpg`. A cropped emblem `assets/stark-tech-icon.jpg` appears in the navigation. Stylesheet paths use `assets/styles.css` consistently.
+
+
+Cinematic homepage revision: removed the large visiting-card image from the hero and replaced it with native HTML/CSS engineering artwork, a dark technical grid, gold accents and responsive layout. Stylesheet is in assets/styles.css; preserve folder structure when uploading.
