@@ -907,3 +907,22 @@ html body main section.reference-hero .hero-wordmark strong{letter-spacing:.025e
  html body header .brand b{letter-spacing:.015em!important}
  html body main section.reference-hero .hero-wordmark strong{letter-spacing:.015em!important}
 }
+
+/* Official STARK TECH wordmark colour — consistent across every page */
+:root{--stark-official-gold:#e5bd63}
+header .brand b,
+header .brand strong,
+.brand b,
+.brand strong,
+.hero-wordmark strong,
+.hero-brand-type strong,
+.site-brand-name{
+  color:var(--stark-official-gold)!important;
+}
+header .brand small,
+.brand small,
+.hero-wordmark small,
+.hero-brand-type small{
+  color:var(--stark-official-gold)!important;
+}
+/* Keep the existing chip emblem unchanged. */
