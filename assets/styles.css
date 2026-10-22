@@ -782,3 +782,11 @@ main{transition:opacity 260ms ease,transform 260ms ease}
 .reference-hero .hero-capabilities{position:relative;z-index:3}
 @media(max-width:950px){.reference-hero .hero-layout{grid-template-columns:1fr;gap:18px}.reference-hero .reference-photo{min-height:360px;border-left:0;border-top:1px solid #d4b16a40}}
 @media(max-width:560px){.reference-hero .reference-photo{min-height:270px}.reference-hero .hero-copy h1{font-size:clamp(38px,9.2vw,48px)}}
+
+/* Explicit image element avoids background-image loading ambiguity */
+.reference-hero .reference-photo{position:relative;min-height:540px;align-self:stretch;overflow:hidden;background:#080b12!important;border-left:1px solid #d4b16a40}
+.reference-hero .reference-photo .hero-photo{display:block!important;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;opacity:1;z-index:0}
+.reference-hero .reference-photo:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#05080c 0%,#05080c12 24%,transparent 62%),linear-gradient(0deg,#05080c66,transparent 35%);pointer-events:none}
+.reference-hero .reference-photo .visual-topline,.reference-hero .reference-photo .visual-stage,.reference-hero .reference-photo .visual-bottomline{display:none!important}
+@media(max-width:950px){.reference-hero .reference-photo{min-height:360px;border-left:0;border-top:1px solid #d4b16a40}}
+@media(max-width:560px){.reference-hero .reference-photo{min-height:270px}}
