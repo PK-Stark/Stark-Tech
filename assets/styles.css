@@ -818,3 +818,7 @@ header .brand-mark{background:transparent!important;mix-blend-mode:screen;object
 .reference-hero .hero-wordmark{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}
 .reference-hero .hero-wordmark strong{font-weight:750}
 .reference-hero .hero-wordmark small{white-space:nowrap}
+
+/* Remove rectangular JPEG canvas behind the emblem: crop to the chip in the logo image */
+header .brand-mark{width:46px;height:46px;object-fit:cover;object-position:center;background:transparent!important;mix-blend-mode:screen;clip-path:inset(14% 14% 14% 14% round 2px);transform:scale(1.15);filter:drop-shadow(0 0 5px #d4b16a22);border:0!important;box-shadow:none!important;border-radius:0!important}
+.reference-hero .hero-wordmark img{width:54px;height:54px;object-fit:cover;object-position:center;background:transparent!important;mix-blend-mode:screen;clip-path:inset(14% 14% 14% 14% round 2px);transform:scale(1.15);filter:drop-shadow(0 0 7px #d4b16a35);border:0!important;box-shadow:none!important;border-radius:0!important}
