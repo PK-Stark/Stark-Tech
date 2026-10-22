@@ -790,3 +790,24 @@ main{transition:opacity 260ms ease,transform 260ms ease}
 .reference-hero .reference-photo .visual-topline,.reference-hero .reference-photo .visual-stage,.reference-hero .reference-photo .visual-bottomline{display:none!important}
 @media(max-width:950px){.reference-hero .reference-photo{min-height:360px;border-left:0;border-top:1px solid #d4b16a40}}
 @media(max-width:560px){.reference-hero .reference-photo{min-height:270px}}
+
+/* Fine-tune to the supplied reference screenshot */
+.reference-hero{padding-top:0!important}
+.reference-hero .hero-layout{grid-template-columns:minmax(0,1.06fr) minmax(0,1fr)!important;gap:24px!important;min-height:560px!important;align-items:center!important}
+.reference-hero .hero-copy{max-width:760px}
+.reference-hero .hero-brand-lockup{max-width:100%;margin-bottom:16px}
+.reference-hero .hero-wordmark{display:flex;align-items:center;gap:14px;margin:0 0 18px}
+.reference-hero .hero-wordmark img{display:block;width:54px;height:54px;object-fit:contain;margin:0;max-height:none;filter:drop-shadow(0 0 8px #d4b16a30)}
+.reference-hero .hero-wordmark strong{display:block;font-size:clamp(21px,1.7vw,29px);line-height:1.1;letter-spacing:.16em;color:#f1d99a}
+.reference-hero .hero-wordmark small{display:block;font-size:9px;letter-spacing:.2em;color:#d4b16a;margin-top:5px}
+.reference-hero .hero-brand-lockup .eyebrow{margin:0;font-size:11px;letter-spacing:.26em}
+.reference-hero .hero-copy h1{font-size:clamp(44px,4.1vw,66px)!important;line-height:1.08!important;letter-spacing:-.045em!important;max-width:760px;margin:18px 0!important}
+.reference-hero .hero-copy h1 br{display:block}
+.reference-hero .hero-copy .lead{max-width:660px}
+.reference-hero .reference-photo{min-height:530px!important;height:100%;background-position:center!important;border:0!important}
+.reference-hero .reference-photo .hero-photo{object-fit:cover;object-position:center center}
+.reference-hero .reference-photo:before{background:linear-gradient(90deg,#05080c44,transparent 24%),linear-gradient(0deg,#05080c55,transparent 30%)!important}
+.reference-hero .reference-capabilities{padding-top:18px;padding-bottom:18px}
+@media(min-width:1200px){.reference-hero .hero-copy h1{font-size:clamp(52px,3.7vw,66px)!important}.reference-hero .hero-layout{min-height:570px!important}}
+@media(max-width:950px){.reference-hero .hero-layout{grid-template-columns:1fr!important;min-height:0!important}.reference-hero .reference-photo{min-height:380px!important;height:380px}.reference-hero .hero-copy h1{font-size:clamp(42px,7vw,60px)!important}}
+@media(max-width:560px){.reference-hero .hero-wordmark img{width:44px;height:44px}.reference-hero .hero-wordmark strong{font-size:20px}.reference-hero .hero-copy h1{font-size:clamp(38px,9vw,48px)!important}.reference-hero .reference-photo{min-height:270px!important;height:270px}}
