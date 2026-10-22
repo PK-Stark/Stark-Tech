@@ -836,3 +836,7 @@ header .brand-mark{width:46px;height:46px;object-fit:cover;object-position:cente
 .reference-hero .hero-capabilities{margin-top:0!important}
 @media(max-width:950px){.reference-hero .hero-layout{grid-template-columns:1fr!important}.reference-hero .reference-photo{height:380px!important;min-height:380px!important}}
 @media(max-width:560px){.reference-hero .reference-photo{height:270px!important;min-height:270px!important}.reference-hero .hero-copy h1{font-size:clamp(38px,9vw,48px)!important}}
+
+/* Final logo fix: show the full chip emblem without clipping */
+header .brand-mark{clip-path:none!important;object-fit:contain!important;transform:none!important;width:46px!important;height:46px!important;mix-blend-mode:screen!important}
+.reference-hero .hero-wordmark img{clip-path:none!important;object-fit:contain!important;transform:none!important;width:40px!important;height:40px!important;mix-blend-mode:screen!important}
