@@ -958,3 +958,6 @@ header nav.links a:focus-visible,header .brand:focus-visible,header .menu:focus-
 }
 @keyframes starkNavEnter{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){header nav.links>a,header nav.links>a::after,header nav.links>a.btn,header nav.links.is-open{transition:none!important;animation:none!important}}
+
+/* Match the existing motion.js mobile-menu state class */
+@media(max-width:760px){header nav.links.open{display:flex;animation:starkNavEnter .22s ease-out both}}
