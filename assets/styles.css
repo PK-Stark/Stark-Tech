@@ -886,3 +886,8 @@ html body main section.reference-hero .hero-visual{display:none!important}
 html body main section.reference-hero>.hero-capabilities{position:relative!important;z-index:3!important;display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;width:100%!important}
 @media(max-width:1100px){html body main section.reference-hero .hero-copy{width:min(78%,760px)!important}html body main section.reference-hero>.hero-capabilities{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
 @media(max-width:760px){html body main section.reference-hero>.reference-backdrop{inset:0!important}html body main section.reference-hero>.hero-atmosphere{inset:0!important}html body main section.reference-hero>.hero-layout{width:calc(100% - 40px)!important;min-height:0!important;padding:44px 0 50px!important}html body main section.reference-hero .hero-copy{width:100%!important;max-width:680px!important}html body main section.reference-hero .hero-copy h1{font-size:clamp(42px,8vw,60px)!important}html body main section.reference-hero>.hero-capabilities{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+
+/* Tighten wordmark tracking so STARK reads as one continuous brand name */
+html body header .brand b{letter-spacing:.09em!important}
+html body main section.reference-hero .hero-wordmark strong{letter-spacing:.09em!important}
+@media(max-width:760px){html body main section.reference-hero .hero-wordmark strong{letter-spacing:.07em!important}}
