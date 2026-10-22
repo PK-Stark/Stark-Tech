@@ -37,3 +37,9 @@ The supplied logo is displayed in the homepage hero as `assets/stark-tech-logo.j
 
 
 Cinematic homepage revision: removed the large visiting-card image from the hero and replaced it with native HTML/CSS engineering artwork, a dark technical grid, gold accents and responsive layout. Stylesheet is in assets/styles.css; preserve folder structure when uploading.
+
+## Cinematic motion upgrade
+- Shared motion and accessibility behavior lives in `assets/motion.js`.
+- The stylesheet includes responsive reveal effects, subtle hover feedback, reduced-motion support and focus-visible states.
+- All motion is progressive enhancement; content remains available when JavaScript or motion effects are unavailable.
+- Project imagery and contact details remain placeholders until approved assets and official contact information are supplied.
