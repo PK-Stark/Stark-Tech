@@ -822,3 +822,17 @@ header .brand-mark{background:transparent!important;mix-blend-mode:screen;object
 /* Remove rectangular JPEG canvas behind the emblem: crop to the chip in the logo image */
 header .brand-mark{width:46px;height:46px;object-fit:cover;object-position:center;background:transparent!important;mix-blend-mode:screen;clip-path:inset(14% 14% 14% 14% round 2px);transform:scale(1.15);filter:drop-shadow(0 0 5px #d4b16a22);border:0!important;box-shadow:none!important;border-radius:0!important}
 .reference-hero .hero-wordmark img{width:54px;height:54px;object-fit:cover;object-position:center;background:transparent!important;mix-blend-mode:screen;clip-path:inset(14% 14% 14% 14% round 2px);transform:scale(1.15);filter:drop-shadow(0 0 7px #d4b16a35);border:0!important;box-shadow:none!important;border-radius:0!important}
+
+/* Final reference composition adjustments */
+.reference-hero .hero-layout{grid-template-columns:minmax(0,1.02fr) minmax(0,1.08fr)!important;gap:28px!important;min-height:560px!important}
+.reference-hero .hero-wordmark{gap:10px!important;margin-bottom:16px!important}
+.reference-hero .hero-wordmark img{width:40px!important;height:40px!important;clip-path:inset(14% 14% 14% 14%)!important;transform:none!important}
+.reference-hero .hero-wordmark strong{font-size:clamp(20px,1.5vw,25px)!important;letter-spacing:.14em!important}
+.reference-hero .hero-wordmark small{font-size:8px!important;letter-spacing:.16em!important}
+.reference-hero .hero-copy h1{font-size:clamp(43px,3.65vw,62px)!important;line-height:1.08!important;max-width:760px!important}
+.reference-hero .reference-photo{min-height:560px!important;height:560px!important;overflow:hidden!important}
+.reference-hero .reference-photo .hero-photo{object-fit:cover!important;object-position:62% center!important}
+.reference-hero .reference-photo:before{background:linear-gradient(90deg,#05080c26,transparent 20%),linear-gradient(0deg,#05080c30,transparent 28%)!important}
+.reference-hero .hero-capabilities{margin-top:0!important}
+@media(max-width:950px){.reference-hero .hero-layout{grid-template-columns:1fr!important}.reference-hero .reference-photo{height:380px!important;min-height:380px!important}}
+@media(max-width:560px){.reference-hero .reference-photo{height:270px!important;min-height:270px!important}.reference-hero .hero-copy h1{font-size:clamp(38px,9vw,48px)!important}}
