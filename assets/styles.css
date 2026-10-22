@@ -768,3 +768,17 @@ main{transition:opacity 260ms ease,transform 260ms ease}
 @media(max-width:1100px){.reference-capabilities{grid-template-columns:repeat(3,minmax(0,1fr))}.reference-capabilities>div:nth-child(3){border-right:0}.reference-capabilities>div:nth-child(-n+3){border-bottom:1px solid #252a30}}
 @media(max-width:950px){.reference-hero .hero-layout{grid-template-columns:1fr;min-height:0;padding-top:30px}.reference-hero .hero-visual{max-width:none}.reference-hero .visual-stage{height:360px}.hero-brand-lockup img{max-height:135px}}
 @media(max-width:560px){.reference-hero .hero-copy h1{font-size:clamp(38px,10vw,48px)}.reference-hero .visual-stage{height:300px}.reference-capabilities{grid-template-columns:repeat(2,minmax(0,1fr));padding:12px}.reference-capabilities>div{padding:12px 8px}.reference-capabilities>div:nth-child(3){border-right:1px solid #252a30}.reference-capabilities>div:nth-child(even){border-right:0}.reference-capabilities>div:nth-child(-n+4){border-bottom:1px solid #252a30}.reference-capabilities b{font-size:11px}.reference-capabilities small{font-size:10px}}
+
+/* Real photographic hero treatment — uses assets/stark-hero.jpg */
+.reference-hero .hero-layout{grid-template-columns:minmax(0,1fr) minmax(0,1.18fr);gap:36px;min-height:570px}
+.reference-hero .hero-copy{position:relative;z-index:2;max-width:760px}
+.reference-hero .hero-brand-lockup img{width:min(100%,320px);max-height:170px;object-fit:contain;object-position:left center}
+.reference-hero .hero-copy h1{font-size:clamp(42px,4.05vw,68px);line-height:1.08;letter-spacing:-.04em;white-space:normal}
+.reference-hero .hero-copy h1 br{display:block}
+.reference-hero .reference-photo{position:relative;min-height:540px;align-self:stretch;overflow:hidden;background:#080b12 url('assets/stark-hero.jpg') center center/cover no-repeat;border-left:1px solid #d4b16a40}
+.reference-hero .reference-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#05080c 0%,#05080c22 28%,transparent 62%),linear-gradient(0deg,#05080c99,transparent 40%);pointer-events:none}
+.reference-hero .reference-photo>*{display:none!important}
+.reference-hero .reference-photo .visual-topline,.reference-hero .reference-photo .visual-stage,.reference-hero .reference-photo .visual-bottomline{display:none!important}
+.reference-hero .hero-capabilities{position:relative;z-index:3}
+@media(max-width:950px){.reference-hero .hero-layout{grid-template-columns:1fr;gap:18px}.reference-hero .reference-photo{min-height:360px;border-left:0;border-top:1px solid #d4b16a40}}
+@media(max-width:560px){.reference-hero .reference-photo{min-height:270px}.reference-hero .hero-copy h1{font-size:clamp(38px,9.2vw,48px)}}
