@@ -42,20 +42,6 @@
   } else {
     revealTargets.forEach(el => el.classList.add('is-visible'));
   }
-  if (!reduceMotion && 'startViewTransition' in document && !location.hash) {
-    document.documentElement.classList.add('view-transitions-ready');
-    document.addEventListener('click', event => {
-      const link = event.target.closest('a');
-      if (!link || link.target === '_blank' || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      const url = new URL(link.href, location.href);
-      if (url.origin !== location.origin || url.pathname === location.pathname && url.hash) return;
-      // Native navigation remains the fallback; CSS view transitions animate eligible same-origin navigation.
-      if (url.pathname.endsWith('.html') || url.pathname === '/') {
-        event.preventDefault();
-        document.startViewTransition(() => { location.href = url.href; });
-      }
-    });
-  }
   document.querySelectorAll('a[href^="#"]').forEach(link => link.addEventListener('click', event => {
     const target = document.querySelector(link.getAttribute('href'));
     if (target) { event.preventDefault(); target.scrollIntoView({behavior:reduceMotion?'auto':'smooth',block:'start'}); }
