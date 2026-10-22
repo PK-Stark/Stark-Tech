@@ -811,3 +811,10 @@ main{transition:opacity 260ms ease,transform 260ms ease}
 @media(min-width:1200px){.reference-hero .hero-copy h1{font-size:clamp(52px,3.7vw,66px)!important}.reference-hero .hero-layout{min-height:570px!important}}
 @media(max-width:950px){.reference-hero .hero-layout{grid-template-columns:1fr!important;min-height:0!important}.reference-hero .reference-photo{min-height:380px!important;height:380px}.reference-hero .hero-copy h1{font-size:clamp(42px,7vw,60px)!important}}
 @media(max-width:560px){.reference-hero .hero-wordmark img{width:44px;height:44px}.reference-hero .hero-wordmark strong{font-size:20px}.reference-hero .hero-copy h1{font-size:clamp(38px,9vw,48px)!important}.reference-hero .reference-photo{min-height:270px!important;height:270px}}
+
+/* Logo treatment: suppress the dark JPEG canvas so only the gold emblem reads */
+header .brand-mark{background:transparent!important;mix-blend-mode:screen;object-fit:contain;filter:drop-shadow(0 0 5px #d4b16a22);border:0!important;box-shadow:none!important;border-radius:0!important}
+.reference-hero .hero-wordmark img{background:transparent!important;mix-blend-mode:screen;object-fit:contain;filter:drop-shadow(0 0 7px #d4b16a35);border:0!important;box-shadow:none!important;border-radius:0!important}
+.reference-hero .hero-wordmark{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}
+.reference-hero .hero-wordmark strong{font-weight:750}
+.reference-hero .hero-wordmark small{white-space:nowrap}
