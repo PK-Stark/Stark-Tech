@@ -926,3 +926,35 @@ header .brand small,
   color:var(--stark-official-gold)!important;
 }
 /* Keep the existing chip emblem unchanged. */
+
+/* Navigation flow: consistent spacing, animated underline, and responsive menu */
+header{position:sticky;top:0;z-index:1000;background:rgba(5,8,13,.94);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(212,169,68,.24)}
+header .nav{display:flex;align-items:center;justify-content:space-between;gap:clamp(18px,3vw,42px)}
+header .brand{flex:0 0 auto;text-decoration:none}
+header nav.links{display:flex;align-items:center;justify-content:flex-end;gap:clamp(14px,2vw,30px);margin-left:auto;white-space:nowrap}
+header nav.links>a:not(.btn){position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0 0 2px;color:#e4e7ec;text-decoration:none;transition:color .24s ease}
+header nav.links>a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:5px;height:2px;background:linear-gradient(90deg,#b8862d,#f2d68a);transform:scaleX(0);transform-origin:left;transition:transform .28s cubic-bezier(.2,.75,.25,1)}
+header nav.links>a:not(.btn):hover,header nav.links>a:not(.btn):focus-visible{color:var(--stark-official-gold,#e5bd63)}
+header nav.links>a:not(.btn):hover::after,header nav.links>a:not(.btn):focus-visible::after,header nav.links>a[aria-current="page"]::after{transform:scaleX(1)}
+header nav.links>a[aria-current="page"]{color:var(--stark-official-gold,#e5bd63)}
+header nav.links>a.btn{flex:0 0 auto;white-space:nowrap;transition:transform .24s ease,box-shadow .24s ease,background .24s ease}
+header nav.links>a.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px #d4a7442c}
+header .menu{display:none}
+header nav.links a:focus-visible,header .brand:focus-visible,header .menu:focus-visible{outline:2px solid var(--stark-official-gold,#e5bd63);outline-offset:5px}
+@media(max-width:980px){
+ header .nav{gap:14px}
+ header nav.links{gap:14px;font-size:12px}
+ header .brand b{font-size:16px}
+ header .brand small{font-size:7px}
+}
+@media(max-width:760px){
+ header .nav{position:relative;min-height:72px;flex-wrap:wrap}
+ header .menu{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 13px;border:1px solid #6d5527;border-radius:4px;background:#0a0d13;color:var(--stark-official-gold,#e5bd63);font:600 12px inherit;cursor:pointer}
+ header nav.links{display:none;position:absolute;top:calc(100% + 1px);left:-20px;right:-20px;margin:0;padding:12px 20px 20px;background:rgba(5,8,13,.98);border-bottom:1px solid #6d5527;box-shadow:0 18px 30px #0008;flex-direction:column;align-items:stretch;gap:4px;white-space:normal}
+ header nav.links.is-open{display:flex;animation:starkNavEnter .22s ease-out both}
+ header nav.links>a:not(.btn){min-height:44px;padding:0 10px}
+ header nav.links>a:not(.btn)::after{left:10px;right:auto;width:38px;bottom:4px}
+ header nav.links>a.btn{margin-top:8px;text-align:center}
+}
+@keyframes starkNavEnter{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){header nav.links>a,header nav.links>a::after,header nav.links>a.btn,header nav.links.is-open{transition:none!important;animation:none!important}}
