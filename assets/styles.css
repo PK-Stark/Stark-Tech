@@ -1105,3 +1105,13 @@ html body main section.reference-hero>.hero-capabilities.reference-capabilities>
 html body main section.reference-hero>.hero-capabilities.reference-capabilities>.capability-visual:nth-child(6)::before{content:""!important;display:block!important;position:absolute!important;z-index:5!important;top:0!important;right:12px!important;width:30%!important;height:clamp(76px,7.4vw,112px)!important;background:#05080d!important;pointer-events:none!important}
 @media(max-width:1050px){html body main section.reference-hero>.hero-capabilities.reference-capabilities>.capability-visual:nth-child(6)::before{height:clamp(100px,13vw,150px)!important}}
 @media(max-width:620px){html body main section.reference-hero>.hero-capabilities.reference-capabilities>.capability-visual:nth-child(6)::before{height:110px!important}}
+
+
+/* Project visuals: responsive branded concept artwork */
+.project-image{display:block;width:100%;height:auto;aspect-ratio:10/7;object-fit:cover;border:1px solid rgba(212,169,68,.25);border-radius:12px;background:#080b12;box-shadow:0 16px 40px rgba(0,0,0,.28)}
+.project-row>.project-image{min-width:0}
+.card.project>.project-image{margin-bottom:18px}
+.project-art-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:240px;aspect-ratio:10/7;border:1px dashed rgba(212,169,68,.42);border-radius:12px;background:radial-gradient(ellipse at 50% 35%,rgba(212,169,68,.12),transparent 60%),#090d14;color:#e9bd4e;text-align:center}
+.project-art-placeholder span{font-size:clamp(22px,3vw,34px);font-weight:700;letter-spacing:.14em}
+.project-art-placeholder small{color:#aab2bd;font-size:12px}
+@media(max-width:720px){.project-image{border-radius:8px}.project-art-placeholder{min-height:190px}}
