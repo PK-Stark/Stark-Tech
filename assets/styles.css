@@ -961,3 +961,17 @@ header nav.links a:focus-visible,header .brand:focus-visible,header .menu:focus-
 
 /* Match the existing motion.js mobile-menu state class */
 @media(max-width:760px){header nav.links.open{display:flex;animation:starkNavEnter .22s ease-out both}}
+
+/* Capability strip with six relevant cinematic engineering visuals */
+.reference-hero .hero-capabilities{align-items:stretch!important}
+.reference-hero .hero-capabilities .capability-visual{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;padding:0 12px 12px!important;overflow:hidden!important;border-right:1px solid #34302a!important;min-width:0!important;background:linear-gradient(180deg,#080c12 0%,#05070a 100%)!important;transition:background .28s ease,transform .28s ease!important}
+.reference-hero .hero-capabilities .capability-visual:last-child{border-right:0!important}
+.reference-hero .hero-capabilities .capability-visual img{display:block!important;width:calc(100% + 24px)!important;height:104px!important;max-width:none!important;object-fit:cover!important;margin:0 -12px 14px!important;opacity:.86!important;filter:saturate(.85) contrast(1.05)!important;transition:transform .45s ease,opacity .3s ease,filter .3s ease!important}
+.reference-hero .hero-capabilities .capability-visual:hover img{transform:scale(1.045)!important;opacity:1!important;filter:saturate(1.05) contrast(1.08)!important}
+.reference-hero .hero-capabilities .capability-visual .cap-icon{display:none!important}
+.reference-hero .hero-capabilities .cap-copy{display:flex!important;flex-direction:column!important;gap:5px!important;align-items:center!important;text-align:center!important;padding:0 2px!important}
+.reference-hero .hero-capabilities .cap-copy b{font-size:12px!important;line-height:1.35!important;color:#f1f1f1!important}
+.reference-hero .hero-capabilities .cap-copy small{font-size:11px!important;line-height:1.4!important;margin-top:0!important;color:#a3a8b0!important}
+@media(max-width:1100px){.reference-hero .hero-capabilities .capability-visual{border-bottom:1px solid #34302a!important}.reference-hero .hero-capabilities .capability-visual img{height:112px!important}}
+@media(max-width:760px){.reference-hero .hero-capabilities{gap:1px!important}.reference-hero .hero-capabilities .capability-visual{padding:0 8px 12px!important}.reference-hero .hero-capabilities .capability-visual img{width:calc(100% + 16px)!important;height:95px!important;margin:0 -8px 10px!important}.reference-hero .hero-capabilities .cap-copy b{font-size:11px!important}.reference-hero .hero-capabilities .cap-copy small{font-size:10px!important}}
+@media(prefers-reduced-motion:reduce){.reference-hero .hero-capabilities .capability-visual,.reference-hero .hero-capabilities .capability-visual img{transition:none!important}}
