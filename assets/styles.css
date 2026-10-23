@@ -1099,3 +1099,9 @@ html body main section.reference-hero>.hero-capabilities.reference-capabilities>
 html body main section.reference-hero>.hero-capabilities.reference-capabilities>.capability-visual:nth-child(6)::before{content:""!important;position:absolute!important;z-index:2!important;top:0!important;right:12px!important;width:24%!important;height:clamp(76px,7.4vw,112px)!important;background:linear-gradient(90deg,rgba(5,8,13,.92),#05080d 30%)!important;pointer-events:none!important}
 @media(max-width:1050px){html body main section.reference-hero>.hero-capabilities.reference-capabilities>.capability-visual:nth-child(6)::before{height:clamp(100px,13vw,150px)!important}}
 @media(max-width:620px){html body main section.reference-hero>.hero-capabilities.reference-capabilities>.capability-visual:nth-child(6)::before{height:110px!important}}
+
+/* Mask the baked-in checkmark with a properly layered overlay */
+html body main section.reference-hero>.hero-capabilities.reference-capabilities>.capability-visual:nth-child(6)>img{position:relative!important;z-index:1!important}
+html body main section.reference-hero>.hero-capabilities.reference-capabilities>.capability-visual:nth-child(6)::before{content:""!important;display:block!important;position:absolute!important;z-index:5!important;top:0!important;right:12px!important;width:30%!important;height:clamp(76px,7.4vw,112px)!important;background:#05080d!important;pointer-events:none!important}
+@media(max-width:1050px){html body main section.reference-hero>.hero-capabilities.reference-capabilities>.capability-visual:nth-child(6)::before{height:clamp(100px,13vw,150px)!important}}
+@media(max-width:620px){html body main section.reference-hero>.hero-capabilities.reference-capabilities>.capability-visual:nth-child(6)::before{height:110px!important}}
