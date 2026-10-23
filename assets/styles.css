@@ -1092,3 +1092,10 @@ html body main section.reference-hero>.hero-capabilities.reference-capabilities>
  html body main section.reference-hero>.hero-capabilities.reference-capabilities>.capability-visual>.cap-copy>small{font-size:10px!important}
 }
 @media(prefers-reduced-motion:reduce){html body main section.reference-hero>.hero-capabilities.reference-capabilities>.capability-visual>img{transition:none!important}}
+
+/* Hide the baked-in checkmark graphic in the Testing & Verification thumbnail */
+html body main section.reference-hero>.hero-capabilities.reference-capabilities>.capability-visual:nth-child(6)>img{object-position:left center!important}
+html body main section.reference-hero>.hero-capabilities.reference-capabilities>.capability-visual:nth-child(6){position:relative!important}
+html body main section.reference-hero>.hero-capabilities.reference-capabilities>.capability-visual:nth-child(6)::before{content:""!important;position:absolute!important;z-index:2!important;top:0!important;right:12px!important;width:24%!important;height:clamp(76px,7.4vw,112px)!important;background:linear-gradient(90deg,rgba(5,8,13,.92),#05080d 30%)!important;pointer-events:none!important}
+@media(max-width:1050px){html body main section.reference-hero>.hero-capabilities.reference-capabilities>.capability-visual:nth-child(6)::before{height:clamp(100px,13vw,150px)!important}}
+@media(max-width:620px){html body main section.reference-hero>.hero-capabilities.reference-capabilities>.capability-visual:nth-child(6)::before{height:110px!important}}
