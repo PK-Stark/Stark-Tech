@@ -1163,3 +1163,26 @@ html body.gallery-active>footer{visibility:hidden!important}
 html body.gallery-active .project-lightbox,
 html body.gallery-active .project-lightbox *{visibility:visible!important}
 html body.gallery-active{overflow:hidden!important;background:#05070c!important}
+
+/* Design thinking flow */
+.design-intro{max-width:850px;margin:0 0 36px}
+.design-intro h2{font-size:clamp(30px,4vw,48px);margin:10px 0 14px}
+.design-intro>p:last-child{max-width:760px;color:var(--muted);line-height:1.8}
+.dt-flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;align-items:stretch}
+.dt-step{position:relative;display:flex;flex-direction:column;min-width:0;padding:22px 18px;border:1px solid var(--line);background:linear-gradient(155deg,rgba(24,32,45,.82),rgba(8,11,18,.98))}
+.dt-step:not(:last-child):after{content:"→";position:absolute;right:-14px;top:31px;z-index:2;display:flex;align-items:center;justify-content:center;width:26px;height:26px;border:1px solid rgba(226,190,108,.45);border-radius:50%;background:#090c12;color:#e6c477;font-size:16px}
+.dt-step-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:28px}
+.dt-number{font-size:27px;font-weight:700;color:#e6c477}
+.dt-tag{font-size:9px;letter-spacing:.12em;color:#aeb8c8;text-align:right}
+.dt-step h3{font-size:22px;margin:0 0 12px}
+.dt-step>p{font-size:13px;line-height:1.75;color:var(--muted);margin:0 0 24px}
+.dt-output{margin-top:auto;padding-top:15px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:6px;font-size:12px;line-height:1.6}
+.dt-output b{color:#e6c477;font-size:10px;text-transform:uppercase;letter-spacing:.1em}
+.dt-output span{color:var(--text,#e9edf5)}
+.dt-loop{display:flex;align-items:flex-start;gap:16px;margin:24px 0;padding:22px 24px;border:1px solid rgba(226,190,108,.35);background:rgba(226,190,108,.055)}
+.dt-loop-icon{font-size:32px;line-height:1;color:#e6c477}
+.dt-loop b{display:block;margin-bottom:5px}
+.dt-loop p{margin:0;color:var(--muted);line-height:1.7}
+.dt-note{margin:20px 0;color:var(--muted);line-height:1.8}
+@media(max-width:1100px){.dt-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.dt-step:not(:last-child):after{display:none}.dt-step:last-child{grid-column:1/-1}}
+@media(max-width:620px){.dt-flow{grid-template-columns:1fr}.dt-step:last-child{grid-column:auto}.dt-step-top{margin-bottom:16px}.dt-step{padding:20px}.dt-loop{padding:18px}}
