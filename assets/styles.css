@@ -1118,3 +1118,6 @@ html body main section.reference-hero>.hero-capabilities.reference-capabilities>
 
 /* Keep full project artwork visible; never crop prototype/CAD images. */
 .project-row > .project-image { object-fit: contain; object-position: center; }
+
+/* ROBOSETTLE NDA visual */
+.confidential-project-visual{display:flex;align-items:center;justify-content:center;padding:28px;overflow:hidden}.confidential-project-visual img{display:block;width:100%;height:auto;max-height:300px;object-fit:contain;opacity:.94}
