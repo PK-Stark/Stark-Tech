@@ -1109,7 +1109,7 @@ html body main section.reference-hero>.hero-capabilities.reference-capabilities>
 
 /* Project visuals: responsive branded concept artwork */
 .project-image{display:block;width:100%;height:auto;aspect-ratio:10/7;object-fit:cover;border:1px solid rgba(212,169,68,.25);border-radius:12px;background:#080b12;box-shadow:0 16px 40px rgba(0,0,0,.28)}
-.project-row>.project-image{min-width:0}
+.project-row>.project-image{min-width:0;aspect-ratio:auto;height:auto;max-height:440px;object-fit:contain;object-position:center}.project-row>.project-board-image{width:100%;background:#080b12}
 .card.project>.project-image{margin-bottom:18px}
 .project-art-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:240px;aspect-ratio:10/7;border:1px dashed rgba(212,169,68,.42);border-radius:12px;background:radial-gradient(ellipse at 50% 35%,rgba(212,169,68,.12),transparent 60%),#090d14;color:#e9bd4e;text-align:center}
 .project-art-placeholder span{font-size:clamp(22px,3vw,34px);font-weight:700;letter-spacing:.14em}
