@@ -1136,7 +1136,7 @@ html body main section.reference-hero>.hero-capabilities.reference-capabilities>
 /* Openable visual portfolio archive */
 .gallery-launch{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:28px}
 .gallery-count{color:var(--muted,#aab3c5);font-size:.92rem}
-.project-lightbox{display:none;position:fixed;inset:0;z-index:9999;background:rgba(5,7,12,.97);padding:clamp(18px,4vw,54px);overflow:auto}
+.project-lightbox{display:none;position:fixed;inset:0;z-index:9999;background:#05070c;padding:clamp(18px,4vw,54px);overflow:auto;isolation:isolate}
 .project-lightbox.open{display:block}
 body.gallery-active{overflow:hidden}
 .lightbox-head{display:flex;align-items:center;justify-content:space-between;gap:24px;max-width:1400px;margin:0 auto 28px}
@@ -1152,3 +1152,14 @@ body.gallery-active{overflow:hidden}
 .lightbox-grid .gallery-item figcaption span{display:block;margin-top:7px;font-size:.82rem;font-weight:400;letter-spacing:0;color:var(--muted,#aab3c5)}
 @media(max-width:900px){.lightbox-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.lightbox-grid{grid-template-columns:1fr}.lightbox-grid .gallery-item a{height:240px}.gallery-launch{align-items:flex-start;flex-direction:column}}
+
+
+/* Ensure the open gallery fully obscures the page beneath it. */
+html body .project-lightbox{background:#05070c!important;opacity:1!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;z-index:2147483000!important}
+html body .project-lightbox.open{display:block!important}
+html body.gallery-active>header,
+html body.gallery-active>main,
+html body.gallery-active>footer{visibility:hidden!important}
+html body.gallery-active .project-lightbox,
+html body.gallery-active .project-lightbox *{visibility:visible!important}
+html body.gallery-active{overflow:hidden!important;background:#05070c!important}
