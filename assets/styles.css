@@ -1186,3 +1186,14 @@ html body.gallery-active{overflow:hidden!important;background:#05070c!important}
 .dt-note{margin:20px 0;color:var(--muted);line-height:1.8}
 @media(max-width:1100px){.dt-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.dt-step:not(:last-child):after{display:none}.dt-step:last-child{grid-column:1/-1}}
 @media(max-width:620px){.dt-flow{grid-template-columns:1fr}.dt-step:last-child{grid-column:auto}.dt-step-top{margin-bottom:16px}.dt-step{padding:20px}.dt-loop{padding:18px}}
+
+/* Contact card on the R&D process page */
+.contact-card{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,1fr);gap:34px;align-items:center;margin:36px 0;padding:clamp(24px,4vw,42px);border:1px solid rgba(222,190,115,.42);background:radial-gradient(ellipse at 0 0,rgba(222,190,115,.09),transparent 58%),linear-gradient(140deg,#121925,#090c12)}
+.contact-card-copy h2{font-size:clamp(25px,3vw,38px);line-height:1.15;margin:10px 0 14px}
+.contact-card-copy>p:last-child{color:var(--muted);line-height:1.75;max-width:600px}
+.contact-card-details{display:flex;flex-direction:column;align-items:flex-start;gap:18px;padding-left:24px;border-left:1px solid var(--line)}
+.contact-detail{display:flex;flex-direction:column;gap:6px;line-height:1.5;overflow-wrap:anywhere}
+.contact-detail-label{font-size:10px;letter-spacing:.14em;color:#e6c477;font-weight:700}
+.contact-detail a{color:var(--text,#e9edf5);text-decoration:none}
+.contact-detail a:hover{color:#e6c477}
+@media(max-width:700px){.contact-card{grid-template-columns:1fr;gap:24px}.contact-card-details{padding-left:0;padding-top:20px;border-left:0;border-top:1px solid var(--line)}}
