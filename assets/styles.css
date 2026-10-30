@@ -1242,3 +1242,9 @@ html body.gallery-active{overflow:hidden!important;background:#05070c!important}
   .project-feature-grid{grid-template-columns:1fr;gap:18px}
   .project-feature-grid .project-row{padding:15px}
 }
+
+
+/* Featured project cards do not need the old row separator. */
+.project-feature-grid .project-row{
+  border-bottom:0;
+}
