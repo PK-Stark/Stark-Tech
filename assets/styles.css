@@ -1197,3 +1197,48 @@ html body.gallery-active{overflow:hidden!important;background:#05070c!important}
 .contact-detail a{color:var(--text,#e9edf5);text-decoration:none}
 .contact-detail a:hover{color:#e6c477}
 @media(max-width:700px){.contact-card{grid-template-columns:1fr;gap:24px}.contact-card-details{padding-left:0;padding-top:20px;border-left:0;border-top:1px solid var(--line)}}
+
+
+/* Featured projects: two-column portfolio cards */
+.project-feature-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:26px;
+  align-items:stretch;
+}
+.project-feature-grid .project-row{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  min-width:0;
+  padding:20px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:linear-gradient(145deg,#111824,#0a0e15);
+}
+.project-feature-grid .project-row>.project-image,
+.project-feature-grid .project-row>.project-art-placeholder{
+  width:100%;
+  height:auto;
+  min-height:0;
+  max-height:320px;
+  aspect-ratio:16/10;
+  object-fit:contain;
+  border-radius:9px;
+}
+.project-feature-grid .project-row>.project-art-placeholder{
+  padding:16px;
+}
+.project-feature-grid .project-row>div:last-child{
+  padding:0 2px 4px;
+}
+.project-feature-grid .project-row h2{
+  margin:8px 0 10px;
+}
+.project-feature-grid .project-row p:last-child{
+  margin-bottom:0;
+}
+@media(max-width:720px){
+  .project-feature-grid{grid-template-columns:1fr;gap:18px}
+  .project-feature-grid .project-row{padding:15px}
+}
