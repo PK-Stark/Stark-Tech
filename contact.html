@@ -6,30 +6,32 @@ const submitBtn = document.getElementById('submitBtn');
 enquiryForm.addEventListener('submit', async function (e) {
   e.preventDefault();
   if (!this.reportValidity()) return;
-  const formData = new FormData(this);
-  const data = Object.fromEntries(formData.entries());
+  const data = Object.fromEntries(new FormData(this).entries());
   data._subject = 'STARK TECH project enquiry — ' + (data.company || data.name);
+  data._replyto = data.email;
   data._template = 'table';
-  data._captcha = 'true';
   submitBtn.disabled = true;
   submitBtn.textContent = 'Sending enquiry…';
-  statusMsg.textContent = 'Submitting your enquiry securely…';
+  statusMsg.textContent = 'Submitting your enquiry…';
   statusMsg.style.color = '';
   try {
     const response = await fetch('https://formsubmit.co/ajax/starktechdynamics@gmail.com', {
       method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: new URLSearchParams(data)
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(data)
     });
     const result = await response.json();
-    if (!response.ok || result.success !== 'true' && result.success !== true) {
+    if (String(result.success) !== 'true') {
       throw new Error(result.message || 'The form service did not accept the submission.');
     }
     statusMsg.textContent = 'Thank you. Your enquiry has been submitted. We will review it and get back to you.';
     statusMsg.style.color = '#7ee0ad';
     this.reset();
   } catch (error) {
-    statusMsg.textContent = 'We could not submit the form just now. Please email ceo.starktechdynamics@gmail.com directly; your entered details have not been cleared.';
+    statusMsg.textContent = 'Submission failed: ' + (error.message || 'Please try again. If this continues, email starktechdynamics@gmail.com directly. Your entered details have not been cleared.');
     statusMsg.style.color = '#ffb4a8';
   } finally {
     submitBtn.disabled = false;
