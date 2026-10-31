@@ -1248,3 +1248,17 @@ html body.gallery-active{overflow:hidden!important;background:#05070c!important}
 .project-feature-grid .project-row{
   border-bottom:0;
 }
+
+/* Project gallery: keep each project's photographs grouped as one cluster. */
+.project-clusters{align-items:stretch}
+.project-cluster{min-width:0;padding:18px;border:1px solid rgba(222,190,115,.28);border-radius:16px;background:linear-gradient(145deg,#0d121c,#080b11);overflow:hidden}
+.project-cluster h3{margin:0 0 6px;font-size:1.2rem;letter-spacing:.045em;color:#e9c875}
+.project-cluster>p{margin:0 0 16px;color:var(--muted,#aab3c5);font-size:.9rem}
+.project-cluster>small{display:block;margin-top:10px;color:var(--muted,#aab3c5)}
+.cluster-images{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.cluster-images a{display:block;min-width:0;aspect-ratio:16/10;overflow:hidden;background:#05080e;border:1px solid rgba(222,190,115,.16);border-radius:8px}
+.cluster-images a.cluster-feature{grid-column:1/-1;aspect-ratio:16/9}
+.cluster-images img{display:block;width:100%;height:100%;object-fit:contain;transition:transform .25s ease}
+.cluster-images a:hover img{transform:scale(1.035)}
+.cluster-images.single a.cluster-feature{grid-column:1/-1;aspect-ratio:16/9}
+@media(max-width:560px){.project-cluster{padding:13px}.cluster-images{gap:6px}}
