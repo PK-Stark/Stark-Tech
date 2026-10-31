@@ -1262,3 +1262,13 @@ html body.gallery-active{overflow:hidden!important;background:#05070c!important}
 .cluster-images a:hover img{transform:scale(1.035)}
 .cluster-images.single a.cluster-feature{grid-column:1/-1;aspect-ratio:16/9}
 @media(max-width:560px){.project-cluster{padding:13px}.cluster-images{gap:6px}}
+
+/* Phone-style visual gallery: individual thumbnails, ordered by project. */
+.phone-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:start}
+.phone-gallery .gallery-thumb{margin:0;min-width:0;overflow:hidden;border:1px solid rgba(222,190,115,.2);border-radius:9px;background:#0a0e15}
+.phone-gallery .gallery-thumb a{display:block;aspect-ratio:1/1;height:auto;padding:0;background:#05080e;overflow:hidden}
+.phone-gallery .gallery-thumb img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s ease}
+.phone-gallery .gallery-thumb a:hover img{transform:scale(1.06)}
+.phone-gallery .gallery-thumb figcaption{padding:7px 9px 9px;font-size:.72rem;font-weight:600;letter-spacing:.025em;color:#e7c77f;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:900px){.phone-gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}}
+@media(max-width:560px){.phone-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.phone-gallery .gallery-thumb figcaption{font-size:.68rem;padding:6px}}
