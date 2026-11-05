@@ -1292,3 +1292,7 @@ html body.gallery-active{overflow:hidden!important;background:#05070c!important}
 .contact-details .item h3{color:#e4c477;margin-bottom:8px;}
 .contact-details .item p{line-height:1.7;overflow-wrap:anywhere;}
 .contact-details .hint{margin-top:28px;}
+
+/* Contact panel: clear, neutral email treatment */
+.contact-details .item a[href^="mailto:"]{color:#fff!important;text-decoration:none;}
+.contact-details .item a[href^="mailto:"]:hover{color:#fff!important;text-decoration:underline;}
