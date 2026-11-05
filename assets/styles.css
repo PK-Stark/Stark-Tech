@@ -1282,3 +1282,13 @@ html body.gallery-active{overflow:hidden!important;background:#05070c!important}
 .social-link:hover{color:#e6c477}
 .social-mark{display:inline-flex;align-items:center;justify-content:center;width:25px;height:25px;border:1px solid rgba(222,190,115,.48);border-radius:50%;font-size:11px;font-weight:800;letter-spacing:-.04em;color:#e6c477;text-transform:lowercase}
 @media(max-width:620px){.footrow{align-items:flex-start;flex-direction:column}.foot-social{gap:14px}}
+
+/* Dedicated contact information panel */
+.contact-details{align-self:stretch;padding:clamp(26px,4vw,42px);border:1px solid #9b793d66;border-radius:18px;background:linear-gradient(145deg,rgba(212,177,106,.13),rgba(12,17,26,.96) 48%),#0c111a;box-shadow:0 22px 60px #0005;}
+.contact-details h2{font-size:clamp(27px,3vw,38px);line-height:1.15;margin:10px 0 16px;}
+.contact-details>p:not(.eyebrow){color:var(--muted,#aeb6c2);line-height:1.75;}
+.contact-details .item{margin-top:24px;padding:18px 0 0;border:0;border-top:1px solid #ffffff18;border-radius:0;background:transparent;}
+.contact-details .item:hover{transform:none;box-shadow:none;border-color:#ffffff18;}
+.contact-details .item h3{color:#e4c477;margin-bottom:8px;}
+.contact-details .item p{line-height:1.7;overflow-wrap:anywhere;}
+.contact-details .hint{margin-top:28px;}
