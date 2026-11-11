@@ -11,8 +11,8 @@
 .launch{position:relative;width:100%;height:100svh;min-height:540px;isolation:isolate;background:radial-gradient(ellipse at 50% 48%,#17202a 0,#0b0e14 43%,#050609 100%);overflow:hidden}
 .stars{position:absolute;inset:0;opacity:.23;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse at center,#000,transparent 78%)}
 .topline{position:absolute;z-index:8;top:28px;left:5vw;right:5vw;display:flex;justify-content:space-between;align-items:center;color:#a9adb6;font-size:10px;letter-spacing:.25em}.topline b{color:var(--gold);font-weight:600}
-.hangar{position:absolute;inset:9% 8% 8%;perspective:1200px;display:grid;place-items:center}
-.portal{position:absolute;width:min(78vw,1000px);height:min(68vh,620px);min-height:350px;border:1px solid #c9a44855;box-shadow:0 0 0 10px #08090d,0 0 0 11px #ffffff12,0 0 90px #087dff20;overflow:hidden;background:linear-gradient(180deg,#121820,#07090e)}
+.hangar{position:absolute;inset:0;perspective:1600px;display:grid;place-items:stretch}
+.portal{position:absolute;inset:0;width:100%;height:100%;min-height:0;border:0;box-shadow:none;overflow:hidden;background:linear-gradient(180deg,#121820,#07090e)}
 .portal:before,.portal:after{content:"";position:absolute;z-index:1;top:0;bottom:0;width:2px;background:linear-gradient(transparent,var(--gold),#fff, var(--gold),transparent);box-shadow:0 0 18px var(--gold)}
 .portal:before{left:50%}.portal:after{display:none}
 .inner-light{position:absolute;inset:0;background:radial-gradient(ellipse at center,#c9a44830 0,#087dff1c 26%,transparent 66%);opacity:0;transition:opacity 1.5s}
@@ -48,7 +48,7 @@
 .site-frame{position:absolute;z-index:20;inset:0;background:#080b12;opacity:0;pointer-events:none;transition:opacity 1.1s}
 .site-frame iframe{width:100%;height:100%;border:0}
 .launch.entered .site-frame{opacity:1;pointer-events:auto;transition-delay:1s}
-@media(max-width:650px){.hangar{inset:13% 3% 12%}.portal{width:94vw;height:55vh;min-height:320px}.topline{top:18px;font-size:8px}.action{bottom:18%;padding:15px 18px;font-size:9px}.caption{bottom:10%;font-size:8px}.status{bottom:18px}.skip{bottom:18px}.lockbar{height:110px}.brand-reveal p{letter-spacing:.2em}}
+@media(max-width:650px){.hangar{inset:0}.portal{inset:0;width:100%;height:100%;min-height:0}.topline{top:18px;font-size:8px}.action{bottom:18%;padding:15px 18px;font-size:9px}.caption{bottom:10%;font-size:8px}.status{bottom:18px}.skip{bottom:18px}.lockbar{height:110px}.brand-reveal p{letter-spacing:.2em}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
 </style>
 </head>
