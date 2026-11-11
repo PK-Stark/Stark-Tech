@@ -13,8 +13,7 @@
 .topline{position:absolute;z-index:8;top:28px;left:5vw;right:5vw;display:flex;justify-content:space-between;align-items:center;color:#a9adb6;font-size:10px;letter-spacing:.25em}.topline b{color:var(--gold);font-weight:600}
 .hangar{position:absolute;inset:0;perspective:1600px;display:grid;place-items:stretch}
 .portal{position:absolute;inset:0;width:100%;height:100%;min-height:0;border:0;box-shadow:none;overflow:hidden;background:linear-gradient(180deg,#121820,#07090e)}
-.portal:before,.portal:after{content:"";position:absolute;z-index:1;top:0;bottom:0;width:2px;background:linear-gradient(transparent,var(--gold),#fff, var(--gold),transparent);box-shadow:0 0 18px var(--gold)}
-.portal:before{left:50%}.portal:after{display:none}
+.portal:before,.portal:after{content:none;display:none}
 .inner-light{position:absolute;inset:0;background:radial-gradient(ellipse at center,#c9a44830 0,#087dff1c 26%,transparent 66%);opacity:0;transition:opacity 1.5s}
 .door{position:absolute;z-index:3;top:0;bottom:0;width:50%;background:linear-gradient(135deg,#303741 0%,#171c24 24%,#252b34 49%,#11151c 72%,#303640 100%);border:1px solid #59616b;transition:transform 2.5s cubic-bezier(.7,0,.15,1);overflow:hidden}
 .door.left{left:0;border-right:4px solid #090b10}.door.right{right:0;border-left:4px solid #090b10}
