@@ -15,18 +15,21 @@
 .portal{position:absolute;inset:0;width:100%;height:100%;min-height:0;border:0;box-shadow:none;overflow:hidden;background:linear-gradient(180deg,#121820,#07090e)}
 .portal:before,.portal:after{content:none;display:none}
 .inner-light{position:absolute;inset:0;background:radial-gradient(ellipse at center,#c9a44830 0,#087dff1c 26%,transparent 66%);opacity:0;transition:opacity 1.5s}
-.door{position:absolute;z-index:3;top:0;bottom:0;width:50%;background:linear-gradient(135deg,#303741 0%,#171c24 24%,#252b34 49%,#11151c 72%,#303640 100%);border:1px solid #59616b;transition:transform 2.5s cubic-bezier(.7,0,.15,1);overflow:hidden}
+.door{position:absolute;z-index:3;top:0;bottom:0;width:50%;background:linear-gradient(145deg,#59616b 0%,#303944 8%,#171d26 22%,#343d48 48%,#151b23 72%,#39434e 94%,#10151c 100%);border:2px solid #68727e;box-shadow:inset 0 0 0 7px #090d13,inset 0 0 0 10px #59636e,inset 0 0 42px #000,0 0 28px #000;transition:transform 2.5s cubic-bezier(.7,0,.15,1);overflow:hidden}
 .door.left{left:0;border-right:4px solid #090b10}.door.right{right:0;border-left:4px solid #090b10}
-.door:before{content:"";position:absolute;inset:14px;background:repeating-linear-gradient(0deg,transparent 0 56px,#ffffff0b 57px 59px),linear-gradient(135deg,#ffffff10,transparent 40%,#0005);border:1px solid #8a929b55;clip-path:polygon(0 0,88% 0,100% 12%,100% 88%,88% 100%,0 100%)}
-.door.right:before{transform:scaleX(-1)}
-.armor{position:absolute;top:12%;bottom:12%;width:19%;background:linear-gradient(90deg,#080b10,#444c56 45%,#171c23);border:1px solid #7b849055;box-shadow:inset 0 0 18px #000}
-.left .armor{right:12%}.right .armor{left:12%}
+.door:before{content:"";position:absolute;z-index:0;inset:2.5%;background:linear-gradient(180deg,#ffffff16,transparent 16%,#0005 84%,#ffffff0a),repeating-linear-gradient(0deg,transparent 0 18%,#080c12 18.2%,#59636e 18.6%,transparent 19.1%),linear-gradient(135deg,#39434f,#171d26 42%,#303944 68%,#111720);border:3px solid #697582;box-shadow:inset 0 0 0 5px #10151d,inset 0 0 0 8px #3e4853,inset 0 0 35px #000;clip-path:polygon(0 0,91% 0,100% 8%,100% 92%,91% 100%,0 100%)}
+.door:after{content:"";position:absolute;z-index:1;inset:13% 9%;border:2px solid #7b8794;background:linear-gradient(145deg,#ffffff12,transparent 22%,#0004 70%),repeating-linear-gradient(0deg,transparent 0 48%,#090e15 49%,#606b77 50%,transparent 51%);box-shadow:inset 0 0 0 5px #111720,inset 0 0 24px #000,0 0 0 5px #111720;clip-path:polygon(0 0,88% 0,100% 12%,100% 88%,88% 100%,0 100%)}
+.door.right:before,.door.right:after{transform:scaleX(-1)}
+.door>*{z-index:2}
+.armor{position:absolute;top:8%;bottom:8%;width:23%;background:linear-gradient(90deg,#080b10 0%,#202833 16%,#65717e 42%,#303a45 58%,#111720 100%);border:2px solid #84909d;box-shadow:inset 0 0 0 4px #111720,inset 0 0 24px #000,0 0 14px #000;clip-path:polygon(0 0,100% 0,100% 94%,88% 100%,0 100%)}
+.left .armor{right:8%}.right .armor{left:8%}
+.bolt.c{top:6%;left:auto;right:7%}.bolt.d{top:auto;bottom:6%;left:7%;right:auto}
 .rib{position:absolute;top:0;bottom:0;width:5px;background:linear-gradient(transparent,#c9a448,#f2d78b,#c9a448,transparent);box-shadow:0 0 14px #c9a44877}
 .left .rib{right:4%}.right .rib{left:4%}
-.panel-lines{position:absolute;inset:23% 8%;border:1px solid #c9a44866;clip-path:polygon(0 0,84% 0,100% 18%,100% 82%,84% 100%,0 100%);background:linear-gradient(135deg,#ffffff08,transparent)}
+.panel-lines{position:absolute;inset:25% 12%;border:2px solid #8a96a2;background:linear-gradient(135deg,#ffffff10,transparent 28%,#0005),linear-gradient(180deg,#29333e,#151c25 55%,#303a45);box-shadow:inset 0 0 0 5px #111720,inset 0 0 28px #000,0 0 0 4px #0a0e14;clip-path:polygon(0 0,86% 0,100% 16%,100% 84%,86% 100%,0 100%)}
 .right .panel-lines{transform:scaleX(-1)}
 .hazard{position:absolute;bottom:10%;left:8%;right:8%;height:8px;background:repeating-linear-gradient(135deg,var(--gold) 0 12px,#161a20 12px 24px);opacity:.8}
-.bolt{position:absolute;width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#d9e0e7,#626b75 45%,#11151a 75%);box-shadow:0 0 0 2px #090b0f;top:8%}.bolt.a{left:8%}.bolt.b{right:8%;top:auto;bottom:8%}
+.bolt{position:absolute;width:17px;height:17px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#f1f4f7 0,#9da8b2 18%,#48525d 48%,#0b0f15 76%);border:1px solid #9ba6b0;box-shadow:0 0 0 4px #10151c,0 2px 8px #000;top:6%;z-index:4}.bolt.a{left:7%}.bolt.b{right:7%;top:auto;bottom:6%}
 .lockbar{position:absolute;z-index:4;top:50%;width:22px;height:150px;transform:translateY(-50%);background:linear-gradient(90deg,#0b0e13,#69717b 45%,#151a20);border:1px solid #9ba3aa66;box-shadow:0 0 14px #000}.lockbar.l{left:49%}.lockbar.r{right:49%}
 .lock-core{position:absolute;z-index:5;left:50%;top:50%;width:68px;height:68px;transform:translate(-50%,-50%);border:2px solid var(--gold);background:radial-gradient(circle,#1d2630,#080a0e 70%);box-shadow:0 0 30px #c9a44855,inset 0 0 18px #087dff44;display:grid;place-items:center;color:var(--gold);font-size:22px}
 .brand-reveal{position:absolute;z-index:2;inset:0;display:grid;place-content:center;justify-items:center;text-align:center;opacity:0;transform:scale(1.16);transition:opacity 1.3s .7s,transform 1.8s .7s;pointer-events:none}
@@ -59,7 +62,7 @@
 <div class="portal">
 <div class="inner-light"></div>
 <div class="brand-reveal"><img src="assets/stark-tech-emblem.png.png" alt="STARK TECH official emblem"><h1>STARK TECH</h1><p>SOLUTIONS BEYOND IMAGINATION</p></div>
-<div class="door left"><div class="armor"></div><div class="rib"></div><div class="panel-lines"></div><div class="hazard"></div><i class="bolt a"></i><i class="bolt b"></i></div>
+<div class="door left"><div class="armor"></div><div class="rib"></div><div class="panel-lines"></div><div class="hazard"></div><i class="bolt a"></i><i class="bolt b"></i><i class="bolt c"></i><i class="bolt d"></i></div>
 <div class="door right"><div class="armor"></div><div class="rib"></div><div class="panel-lines"></div><div class="hazard"></div><i class="bolt a"></i><i class="bolt b"></i></div>
 <div class="lockbar l"></div><div class="lockbar r"></div><div class="lock-core">✦</div>
 </div>
