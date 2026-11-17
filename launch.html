@@ -163,6 +163,11 @@
 .brand-reveal{z-index:5}
 @media(max-width:650px){.reference-door-art{background-size:cover}.action{bottom:11.5%;width:34vw;height:48px}.skip{bottom:4%;right:3vw}}
 
+
+/* Let the supplied artwork remain untouched; remove all previous CSS-built door/hangar layers */
+.portal:before,.portal:after,.hangar:before,.hangar:after,
+.inner-light,.side-glow,.hangar-light,.stars{display:none!important}
+
 </style>
 </head>
 <body>
