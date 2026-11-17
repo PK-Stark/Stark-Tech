@@ -168,6 +168,25 @@
 .portal:before,.portal:after,.hangar:before,.hangar:after,
 .inner-light,.side-glow,.hangar-light,.stars{display:none!important}
 
+
+/* Make the supplied single-piece reference artwork into two independently moving blast-door leaves */
+.reference-door-art{background:none!important;overflow:hidden;opacity:1!important;z-index:1}
+.art-panel{position:absolute;top:0;bottom:0;width:50.05%;background-image:url("assets/stark-tech-blast-door.webp");background-repeat:no-repeat;background-size:200% 100%;will-change:transform;transition:transform 3.1s cubic-bezier(.72,0,.16,1);backface-visibility:hidden}
+.art-left{left:0;background-position:left center;transform:translateX(0)}
+.art-right{right:0;background-position:right center;transform:translateX(0)}
+.launch.opening .art-left{transform:translateX(-101%)}
+.launch.opening .art-right{transform:translateX(101%)}
+.launch.prep .art-panel{filter:brightness(1.14);transition:filter .45s}
+.launch.opening .art-panel{filter:brightness(1);transition:transform 3.1s cubic-bezier(.72,0,.16,1),filter .5s}
+.hydraulic{z-index:8;opacity:.95}
+.rod{transform:scaleX(.18);transform-origin:left center}
+.launch.prep .hydraulic .rod{animation:piston-drive 1.05s cubic-bezier(.2,.8,.2,1) .25s forwards}
+.launch.prep .hydraulic .cylinder{animation:cylinder-shudder .55s ease-in-out .25s 3}
+.steam{z-index:9}
+.launch.prep .steam{animation:steam-release 1.8s ease-out .65s forwards}
+.launch.opening .hydraulic{opacity:0;transition:opacity .35s .4s}
+.launch.opening .steam{opacity:0;transition:opacity .7s .8s}
+
 </style>
 </head>
 <body>
@@ -175,7 +194,7 @@
 <div class="stars"></div>
 <div class="topline"><span><b>STARK TECH</b> / SYSTEMS ACCESS</span><span>13 · 11 · 2026</span></div>
 <div class="hangar">
-<div class="portal"><div class="reference-door-art" aria-hidden="true"></div>
+<div class="portal"><div class="reference-door-art" aria-hidden="true"><div class="art-panel art-left"></div><div class="art-panel art-right"></div></div>
 <div class="inner-light"></div><div class="side-glow left"></div><div class="side-glow right"></div><div class="hangar-light l"></div><div class="hangar-light r"></div>
 <div class="hydraulic piston-left"><span class="cylinder"></span><span class="rod"></span><span class="mount"></span></div><div class="hydraulic piston-right"><span class="cylinder"></span><span class="rod"></span><span class="mount"></span></div><div class="hydraulic piston-left lower"><span class="cylinder"></span><span class="rod"></span><span class="mount"></span></div><div class="hydraulic piston-right lower"><span class="cylinder"></span><span class="rod"></span><span class="mount"></span></div><div class="steam steam-a"></div><div class="steam steam-b"></div><div class="steam steam-c"></div><div class="steam steam-d"></div><div class="vent vent-left"></div><div class="vent vent-right"></div><div class="brand-reveal"><img src="assets/stark-tech-emblem.png.png" alt="STARK TECH official emblem"><h1>STARK TECH</h1><p>SOLUTIONS BEYOND IMAGINATION</p></div>
 <div class="door left"><div class="armor"></div><div class="rib"></div><div class="panel-lines"></div><div class="door-mark"><strong>STARK TECH</strong>SECURE ACCESS<span>MODULE TG300</span></div><div class="hazard"></div><i class="bolt a"></i><i class="bolt b"></i><i class="bolt c"></i><i class="bolt d"></i></div>
@@ -191,7 +210,7 @@
 </main>
 <script>
 const stage=document.getElementById('launch'),button=document.getElementById('launchButton'),status=document.getElementById('status');
-button.addEventListener('click',()=>{if(stage.classList.contains('prep')||stage.classList.contains('opening'))return;button.disabled=true;button.textContent='AUTHORIZING';status.textContent='SYSTEM STATUS: AUTHORIZATION ACCEPTED';stage.classList.add('prep');setTimeout(()=>{status.textContent='HYDRAULIC PRESSURE: BUILDING';button.textContent='PRESSURE LOCK RELEASED';},650);setTimeout(()=>{status.textContent='SEAL PURGE: VENTING';},1150);setTimeout(()=>{status.textContent='MECHANICAL LOCKS: RETRACTED';stage.classList.add('opening');},2050);setTimeout(()=>{status.textContent='SYSTEM STATUS: FACILITY OPEN';},4050);setTimeout(()=>{stage.classList.add('entered');status.textContent='STARK TECH // ONLINE';},5900);});
+button.addEventListener('click',()=>{if(stage.classList.contains('prep')||stage.classList.contains('opening'))return;button.disabled=true;button.textContent='AUTHORIZING';status.textContent='SYSTEM STATUS: AUTHORIZATION ACCEPTED';stage.classList.add('prep');setTimeout(()=>{status.textContent='HYDRAULIC PRESSURE: BUILDING';},450);setTimeout(()=>{status.textContent='SEAL PURGE: VENTING';},1250);setTimeout(()=>{status.textContent='MECHANICAL LOCKS: RETRACTED';stage.classList.add('opening');},2450);setTimeout(()=>{status.textContent='SYSTEM STATUS: FACILITY OPEN';},5300);setTimeout(()=>{stage.classList.add('entered');status.textContent='STARK TECH // ONLINE';},6900);});
 </script>
 </body>
 </html>
