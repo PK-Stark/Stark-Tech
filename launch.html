@@ -148,6 +148,21 @@
 .launch.opening .door.left,.launch.opening .door.right{transition-delay:.35s}
 @media(max-width:650px){.hydraulic{width:26%;height:18px}.cylinder{height:13px}.rod{top:7px;height:5px}.mount{height:21px}.vent{height:36px;width:15px}}
 
+
+/* Exact uploaded master blast-door artwork */
+.portal{background:#020304!important}
+.reference-door-art{position:absolute;z-index:1;inset:0;background:#020304 url("assets/stark-tech-blast-door.webp") center center/cover no-repeat;opacity:1;transition:opacity 2.2s ease}
+.portal>*:not(.reference-door-art){z-index:3}
+.door,.lockbar,.lock-core{display:none!important}
+.topline,.caption,.status{display:none!important}
+/* The reference artwork already contains the launch typography; retain a real, invisible hit target */
+.action{left:50%;bottom:11.5%;width:min(22vw,350px);height:64px;padding:0;transform:translateX(-50%);opacity:0;background:transparent;border:0;box-shadow:none;clip-path:none;color:transparent;font-size:0;z-index:15}
+.action:hover{transform:translateX(-50%);box-shadow:none}
+.skip{right:4.4vw;bottom:4.6%;width:100px;height:32px;opacity:0;border:0;font-size:0}
+.launch.opening .reference-door-art{opacity:0}
+.brand-reveal{z-index:5}
+@media(max-width:650px){.reference-door-art{background-size:cover}.action{bottom:11.5%;width:34vw;height:48px}.skip{bottom:4%;right:3vw}}
+
 </style>
 </head>
 <body>
@@ -155,7 +170,7 @@
 <div class="stars"></div>
 <div class="topline"><span><b>STARK TECH</b> / SYSTEMS ACCESS</span><span>13 · 11 · 2026</span></div>
 <div class="hangar">
-<div class="portal">
+<div class="portal"><div class="reference-door-art" aria-hidden="true"></div>
 <div class="inner-light"></div><div class="side-glow left"></div><div class="side-glow right"></div><div class="hangar-light l"></div><div class="hangar-light r"></div>
 <div class="hydraulic piston-left"><span class="cylinder"></span><span class="rod"></span><span class="mount"></span></div><div class="hydraulic piston-right"><span class="cylinder"></span><span class="rod"></span><span class="mount"></span></div><div class="hydraulic piston-left lower"><span class="cylinder"></span><span class="rod"></span><span class="mount"></span></div><div class="hydraulic piston-right lower"><span class="cylinder"></span><span class="rod"></span><span class="mount"></span></div><div class="steam steam-a"></div><div class="steam steam-b"></div><div class="steam steam-c"></div><div class="steam steam-d"></div><div class="vent vent-left"></div><div class="vent vent-right"></div><div class="brand-reveal"><img src="assets/stark-tech-emblem.png.png" alt="STARK TECH official emblem"><h1>STARK TECH</h1><p>SOLUTIONS BEYOND IMAGINATION</p></div>
 <div class="door left"><div class="armor"></div><div class="rib"></div><div class="panel-lines"></div><div class="door-mark"><strong>STARK TECH</strong>SECURE ACCESS<span>MODULE TG300</span></div><div class="hazard"></div><i class="bolt a"></i><i class="bolt b"></i><i class="bolt c"></i><i class="bolt d"></i></div>
