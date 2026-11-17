@@ -65,6 +65,60 @@
 .side-glow.left{left:17%}.side-glow.right{right:17%}
 .hangar-light{position:absolute;z-index:2;top:12%;width:11%;height:7px;background:#e6f4ff;box-shadow:0 0 8px #d9efff,0 0 24px #9acfff;opacity:.9}
 .hangar-light.l{left:25%}.hangar-light.r{right:25%}
+
+/* Full-bleed obsidian military hangar treatment */
+.launch{background:#030507}
+.hangar{background:
+ radial-gradient(ellipse at 50% 84%,#bd762b2b 0,transparent 24%),
+ radial-gradient(ellipse at 50% 46%,#26323b55 0,transparent 48%),
+ linear-gradient(180deg,#050709 0%,#111920 16%,#070a0e 76%,#020304 100%)}
+.portal{inset:0;width:100%;height:100%;border:0;background:
+ linear-gradient(180deg,transparent 0 8%,#c4d8e522 8.2%,transparent 9.2%),
+ radial-gradient(ellipse at 50% 92%,#d28a3825,transparent 28%),
+ linear-gradient(180deg,#0a0e12,#111920 18%,#070a0d 72%,#030405)}
+.portal:before{inset:7% 3% 12%;border:18px solid #11171c;border-top-width:22px;border-bottom-width:24px;background:linear-gradient(180deg,#28323a 0,#0b1015 13%,transparent 20%,transparent 82%,#090d11 100%);box-shadow:inset 0 0 0 2px #83909a,inset 0 0 0 8px #080b0e,inset 0 0 34px #000,0 0 0 2px #020304,0 0 36px #000}
+.portal:after{background:
+ linear-gradient(90deg,transparent 0 2.8%,#71808b 2.9%,#11181e 3.2%,transparent 3.7%,transparent 96.3%,#11181e 96.8%,#71808b 97.1%,transparent 97.2%),
+ linear-gradient(180deg,#020304 0 7%,transparent 7.4% 88%,#020304 89% 100%);opacity:.7}
+.door{top:19%;bottom:14%;width:50%;border:0;background:
+ repeating-linear-gradient(0deg,transparent 0 17.8%,#05080b 18%,#48545e 18.25%,#151c22 18.7%,transparent 19.1%),
+ repeating-linear-gradient(135deg,#ffffff04 0 1px,transparent 1px 11px),
+ linear-gradient(135deg,#29343c 0%,#151c22 16%,#080c10 38%,#1b242b 58%,#080b0f 84%,#27313a 100%);
+ box-shadow:inset 0 0 0 3px #75818b,inset 0 0 0 8px #080b0f,inset 0 0 0 12px #303b44,inset 0 0 70px #000,0 0 40px #000}
+.door.left{border-right:2px solid #8e9aa2}
+.door.right{border-left:2px solid #8e9aa2}
+.door:before{inset:3%;background:
+ linear-gradient(180deg,#dce9f00b,transparent 14%,#0008 88%,#ffffff08),
+ repeating-linear-gradient(0deg,transparent 0 24%,#080b0f 24.2%,#56636d 24.45%,#11171d 25%,transparent 25.5%),
+ linear-gradient(135deg,#26313a,#0a0e12 42%,#1c262e 72%,#080b0f);
+ border:2px solid #75818b;box-shadow:inset 0 0 0 5px #080b0f,inset 0 0 0 10px #35414a,inset 0 0 46px #000}
+.door:after{inset:16% 11%;border:2px solid #596771;background:
+ linear-gradient(145deg,#222c34,#090d11 38%,#18222a 76%,#080b0f);
+ box-shadow:inset 0 0 0 7px #080b0f,inset 0 0 0 11px #313d46,inset 0 0 40px #000,0 0 0 4px #080b0f}
+.door-mark{top:42%;color:#aeb8c0;text-shadow:0 2px 5px #000}
+.door-mark strong{color:#d3d9de;letter-spacing:.36em}
+.door-mark span{color:#b88b49}
+.panel-lines{inset:22% 12%;border-color:#65727c;background:
+ repeating-linear-gradient(135deg,#ffffff04 0 1px,transparent 1px 10px),
+ linear-gradient(145deg,#202a32,#090d11 42%,#1b252d 74%,#080b0f);
+ box-shadow:inset 0 0 0 7px #080b0f,inset 0 0 0 12px #303b44,inset 0 0 45px #000,0 0 0 4px #080b0f}
+.armor{width:19%;background:
+ repeating-linear-gradient(0deg,transparent 0 44px,#070a0d 45px,#82909a 46px,#141b21 49px,transparent 53px),
+ linear-gradient(90deg,#070a0d,#29343c 24%,#11171d 52%,#34404a 78%,#070a0d);
+ border:3px solid #687680}
+.hazard{opacity:.52;height:5px;filter:drop-shadow(0 0 4px #d69b42)}
+.side-glow{width:8px;opacity:.9;filter:blur(4px)}
+.hangar:before{left:8%;right:8%;height:21%;background:
+ repeating-linear-gradient(90deg,transparent 0 14%,#050709 14.2%,#52616b 14.4%,transparent 15%),
+ linear-gradient(180deg,#050709,#222d35 58%,#080b0f);border-bottom:2px solid #65737d}
+.hangar:after{height:14%;background:
+ repeating-linear-gradient(90deg,transparent 0 10%,#ffffff0a 10.1%,transparent 10.3%),
+ linear-gradient(180deg,#080b0e,#202a32 25%,#050709 84%)}
+.lock-core{border-color:#b78c49;background:linear-gradient(145deg,#202a32,#070a0d 48%,#1b252d);box-shadow:0 0 0 5px #050709,0 0 0 7px #697680,0 0 30px #000,inset 0 0 22px #000}
+.action{border:1px solid #d6a24d;background:linear-gradient(135deg,#171b1f,#050709);color:#f1d29a;box-shadow:0 0 28px #d5a64a28,inset 0 0 0 1px #ffffff12}
+.caption{color:#c2c8ce}
+@media(max-width:650px){.door{top:22%;bottom:17%}.door-mark{font-size:6px}.portal:before{inset:8% 1% 13%;border-width:9px}}
+
 </style>
 </head>
 <body>
