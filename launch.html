@@ -218,6 +218,37 @@
  .launch.opening .art-right{transform:translateX(55vw)}
 }
 
+
+/* Hydraulic actuators are mounted on the moving door leaves, not in the hangar air */
+.door-interior:after{display:none!important}
+.portal .hydraulic:not(.door-piston),.portal>.steam{display:none!important}
+.art-panel{overflow:visible}
+.art-panel .door-piston{display:block!important;position:absolute;z-index:6;top:33%;left:25%;right:auto;width:21%;height:28px;opacity:0;pointer-events:none;filter:drop-shadow(0 3px 6px #000)}
+.art-panel .door-piston.piston-lower{top:65%}
+.art-panel.art-right .door-piston{left:54%;right:auto}
+.art-panel .door-piston .cylinder{left:0;top:4px;width:78%;height:18px;border:2px solid #77858f;border-radius:3px;background:linear-gradient(180deg,#7e8b94,#151d24 30%,#3b4852 58%,#080c10);box-shadow:inset 0 0 0 2px #090d11,0 0 10px #000}
+.art-panel .door-piston .rod{left:72%;top:9px;width:28%;height:8px;background:linear-gradient(180deg,#f5f8fa,#9aa7b0 48%,#303a42);border:1px solid #d1d9de;transform:scaleX(.18);transform-origin:left center}
+.art-panel .door-piston .mount{left:96%;top:0;width:12px;height:28px;border:2px solid #687680;background:linear-gradient(90deg,#090d11,#9aa6af,#10161c)}
+.art-panel.art-right .door-piston .rod{transform-origin:right center;left:0}
+.art-panel.art-right .door-piston .mount{left:auto;right:0}
+.art-panel.art-right .door-piston .cylinder{left:auto;right:0}
+.art-panel .door-steam{display:block;position:absolute;z-index:7;width:18%;height:14%;opacity:0;pointer-events:none;filter:blur(7px);background:radial-gradient(ellipse at 50% 65%,#e8edf0a8 0,#aab7c055 28%,#7c8b9820 52%,transparent 72%)}
+.art-panel.art-left .steam-upper{left:42%;top:28%}
+.art-panel.art-left .steam-lower{left:42%;top:62%}
+.art-panel.art-right .steam-upper{right:42%;left:auto;top:28%}
+.art-panel.art-right .steam-lower{right:42%;left:auto;top:62%}
+.launch.prep .art-panel .door-piston{opacity:1;transition:opacity .25s}
+.launch.prep .art-panel .door-piston .rod{animation:piston-drive 1.05s cubic-bezier(.2,.8,.2,1) .25s forwards}
+.launch.prep .art-panel .door-piston .cylinder{animation:cylinder-shudder .55s ease-in-out .25s 3}
+.launch.prep .art-panel .door-steam{animation:steam-release 1.8s ease-out .65s forwards}
+.launch.opening .art-panel .door-piston,.launch.opening .art-panel .door-steam{opacity:0;transition:opacity .35s .3s}
+@media(max-width:700px){
+ .art-panel .door-piston{height:18px;width:23%}
+ .art-panel .door-piston .cylinder{height:13px}
+ .art-panel .door-piston .rod{top:7px;height:5px}
+ .art-panel .door-piston .mount{height:20px}
+}
+
 </style>
 </head>
 <body>
@@ -225,7 +256,7 @@
 <div class="stars"></div>
 <div class="topline"><span><b>STARK TECH</b> / SYSTEMS ACCESS</span><span>13 · 11 · 2026</span></div>
 <div class="hangar">
-<div class="portal"><div class="reference-door-art" aria-hidden="true"><div class="door-interior"></div><div class="art-panel art-left"></div><div class="art-panel art-right"></div></div>
+<div class="portal"><div class="reference-door-art" aria-hidden="true"><div class="door-interior"></div><div class="art-panel art-left"><div class="hydraulic door-piston piston-upper"><span class="cylinder"></span><span class="rod"></span><span class="mount"></span></div><div class="hydraulic door-piston piston-lower"><span class="cylinder"></span><span class="rod"></span><span class="mount"></span></div><div class="steam door-steam steam-upper"></div><div class="steam door-steam steam-lower"></div></div><div class="art-panel art-right"><div class="hydraulic door-piston piston-upper"><span class="cylinder"></span><span class="rod"></span><span class="mount"></span></div><div class="hydraulic door-piston piston-lower"><span class="cylinder"></span><span class="rod"></span><span class="mount"></span></div><div class="steam door-steam steam-upper"></div><div class="steam door-steam steam-lower"></div></div></div>
 <div class="inner-light"></div><div class="side-glow left"></div><div class="side-glow right"></div><div class="hangar-light l"></div><div class="hangar-light r"></div>
 <div class="hydraulic piston-left"><span class="cylinder"></span><span class="rod"></span><span class="mount"></span></div><div class="hydraulic piston-right"><span class="cylinder"></span><span class="rod"></span><span class="mount"></span></div><div class="hydraulic piston-left lower"><span class="cylinder"></span><span class="rod"></span><span class="mount"></span></div><div class="hydraulic piston-right lower"><span class="cylinder"></span><span class="rod"></span><span class="mount"></span></div><div class="steam steam-a"></div><div class="steam steam-b"></div><div class="steam steam-c"></div><div class="steam steam-d"></div><div class="vent vent-left"></div><div class="vent vent-right"></div><div class="brand-reveal"><img src="assets/stark-tech-emblem.png.png" alt="STARK TECH official emblem"><h1>STARK TECH</h1><p>SOLUTIONS BEYOND IMAGINATION</p></div>
 <div class="door left"><div class="armor"></div><div class="rib"></div><div class="panel-lines"></div><div class="door-mark"><strong>STARK TECH</strong>SECURE ACCESS<span>MODULE TG300</span></div><div class="hazard"></div><i class="bolt a"></i><i class="bolt b"></i><i class="bolt c"></i><i class="bolt d"></i></div>
