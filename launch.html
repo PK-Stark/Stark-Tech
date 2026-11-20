@@ -328,6 +328,21 @@
  .launch.opening .art-right{transform:translateX(64vw)!important}
 }
 
+
+/* FINAL CORRECTION: no freestanding pocket rods. The reference image already contains
+   the fixed hangar frame; let the leaves retract behind that frame's inner jambs. */
+.portal:before,.portal:after{content:none!important;display:none!important}
+.reference-door-art{overflow:hidden!important}
+.art-left{clip-path:polygon(22.5% 25.8%,49.9% 25.8%,50.55% 31.5%,50.55% 68.4%,49.9% 75.8%,25.1% 75.8%,22.5% 70.8%)!important}
+.art-right{clip-path:polygon(50.1% 25.8%,77.5% 25.8%,77.5% 70.8%,74.9% 75.8%,50.1% 75.8%,49.45% 68.4%,49.45% 31.5%)!important}
+/* Each leaf stops behind the fixed side jamb, rather than travelling across the hangar. */
+.launch.opening .art-left{transform:translateX(-34vw)!important}
+.launch.opening .art-right{transform:translateX(34vw)!important}
+@media(max-width:700px){
+ .launch.opening .art-left{transform:translateX(-37vw)!important}
+ .launch.opening .art-right{transform:translateX(37vw)!important}
+}
+
 </style>
 </head>
 <body>
