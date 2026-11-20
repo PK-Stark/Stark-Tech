@@ -249,6 +249,33 @@
  .art-panel .door-piston .mount{height:20px}
 }
 
+
+/* FINAL SEAL + RECESSED POCKET TRAVEL
+   Fixed hangar remains stationary; only the two armoured leaves translate. */
+.portal{overflow:hidden;background:#030507!important}
+.reference-door-art{overflow:hidden;background:none!important}
+.door-interior{left:21.5%;right:21.5%;top:22.5%;bottom:24%;background:
+ radial-gradient(ellipse at 50% 25%,#1b252e 0,transparent 54%),
+ linear-gradient(180deg,#080d12 0%,#020406 48%,#080d12 100%);}
+/* The closed leaves overlap beneath a dark compression seal: no visible daylight gap. */
+.art-panel{transition:transform 3.6s cubic-bezier(.72,0,.16,1)!important}
+.art-left{clip-path:polygon(22.5% 25.8%,49.9% 25.8%,50.55% 31.5%,50.55% 68.4%,49.9% 75.8%,25.1% 75.8%,22.5% 70.8%)!important}
+.art-right{clip-path:polygon(50.1% 25.8%,77.5% 25.8%,77.5% 70.8%,74.9% 75.8%,50.1% 75.8%,49.45% 68.4%,49.45% 31.5%)!important}
+.door-interior:after{display:block!important;content:"";position:absolute;z-index:4;left:49.72%;top:0;bottom:0;width:.56%;background:linear-gradient(90deg,#020406,#151c22 35%,#050709 70%,#020406);box-shadow:0 0 10px #000;opacity:.9}
+/* Recessed receiving pockets at each side hide the leaves as they travel behind the fixed wall. */
+.portal:before{content:"";display:block!important;position:absolute;z-index:5;top:20%;bottom:17%;left:17.5%;width:5.8%;border-left:5px solid #252f37;border-right:3px solid #65717a;background:linear-gradient(90deg,#030507,#111820 34%,#05080b 78%,#020304);box-shadow:inset 0 0 18px #000,8px 0 18px #000;pointer-events:none}
+.portal:after{content:"";display:block!important;position:absolute;z-index:5;top:20%;bottom:17%;right:17.5%;width:5.8%;border-right:5px solid #252f37;border-left:3px solid #65717a;background:linear-gradient(270deg,#030507,#111820 34%,#05080b 78%,#020304);box-shadow:inset 0 0 18px #000,-8px 0 18px #000;pointer-events:none}
+.launch.opening .art-left{transform:translateX(-62vw)!important}
+.launch.opening .art-right{transform:translateX(62vw)!important}
+.launch.opening .door-interior:after{opacity:0;transition:opacity .45s}
+@media(max-width:700px){
+ .art-left{clip-path:polygon(18% 26%,49.9% 26%,50.55% 32%,50.55% 68%,49.9% 75%,20% 75%,18% 70%)!important}
+ .art-right{clip-path:polygon(50.1% 26%,82% 26%,82% 70%,80% 75%,50.1% 75%,49.45% 68%,49.45% 32%)!important}
+ .portal:before{left:14%;width:5%}.portal:after{right:14%;width:5%}
+ .launch.opening .art-left{transform:translateX(-68vw)!important}
+ .launch.opening .art-right{transform:translateX(68vw)!important}
+}
+
 </style>
 </head>
 <body>
