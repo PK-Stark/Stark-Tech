@@ -370,3 +370,45 @@ button.addEventListener('click',()=>{if(stage.classList.contains('prep')||stage.
 </script>
 </body>
 </html>
+/* RECESSED DOOR MECHANISM — final geometry override
+   The hangar artwork stays fixed. The original door pixels are masked, then
+   two accurately cropped leaves move behind fixed foreground jambs. */
+.portal{position:absolute!important;inset:0!important;overflow:hidden!important;isolation:isolate!important}
+.reference-door-art{position:absolute!important;inset:0!important;z-index:1!important;overflow:visible!important;background:url("assets/stark-tech-blast-door.webp") center/100% 100% no-repeat!important}
+.door-interior{
+  display:block!important;position:absolute!important;z-index:2!important;
+  left:9.5%!important;right:9.5%!important;top:18%!important;bottom:14%!important;
+  clip-path:polygon(7% 0,93% 0,100% 12%,100% 87%,93% 100%,7% 100%,0 87%,0 12%)!important;
+  background:radial-gradient(ellipse at 50% 30%,#101820 0,#05090d 58%,#020304 100%)!important;
+  box-shadow:inset 0 0 70px #000!important;
+}
+.door-interior:before{content:""!important;display:block!important;position:absolute!important;inset:5%!important;border:1px solid #1a252d!important;background:linear-gradient(180deg,#080d12,#020406 70%,#080d12)!important;box-shadow:inset 0 0 42px #000!important}
+.art-panel{
+  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:3!important;
+  background:url("assets/stark-tech-blast-door.webp") center/100% 100% no-repeat!important;
+  transition:transform 3.8s cubic-bezier(.72,0,.16,1)!important;will-change:transform!important;
+}
+/* The image's actual door face occupies the outer left/right portions of the artwork. */
+.art-left{clip-path:polygon(10.5% 27.5%,50.15% 27.5%,50.45% 33%,50.45% 79%,48.5% 82%,13% 82%,10.5% 76%)!important}
+.art-right{clip-path:polygon(49.85% 27.5%,89.5% 27.5%,89.5% 76%,87% 82%,51.5% 82%,49.55% 79%,49.55% 33%)!important}
+/* Fixed hangar jambs sit in front of the translating leaves and conceal their edges. */
+.portal:before,.portal:after{
+  content:""!important;display:block!important;position:absolute!important;z-index:6!important;
+  top:18%!important;bottom:13%!important;width:12%!important;pointer-events:none!important;
+  background:linear-gradient(90deg,#030507 0%,#101820 24%,#26323b 29%,#0a0f14 36%,#030507 100%)!important;
+  border:0!important;box-shadow:inset 0 0 24px #000,0 0 22px #000!important;clip-path:none!important;
+}
+.portal:before{left:0!important;right:auto!important;border-right:3px solid #697781!important}
+.portal:after{right:0!important;left:auto!important;border-left:3px solid #697781!important;transform:none!important}
+.launch.opening .art-left{transform:translateX(-40vw)!important}
+.launch.opening .art-right{transform:translateX(40vw)!important}
+.art-panel .door-piston{z-index:4!important}
+.launch.opening .art-panel .door-piston,.launch.opening .art-panel .door-steam{opacity:0!important;transition:opacity .35s!important}
+@media(max-width:700px){
+ .door-interior{left:7%!important;right:7%!important;top:22%!important;bottom:18%!important}
+ .art-left{clip-path:polygon(8% 29%,50.15% 29%,50.45% 34%,50.45% 77%,48.5% 80%,10% 80%,8% 74%)!important}
+ .art-right{clip-path:polygon(49.85% 29%,92% 29%,92% 74%,90% 80%,51.5% 80%,49.55% 77%,49.55% 34%)!important}
+ .portal:before,.portal:after{width:9%!important}
+ .launch.opening .art-left{transform:translateX(-42vw)!important}
+ .launch.opening .art-right{transform:translateX(42vw)!important}
+}
